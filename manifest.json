@@ -1,0 +1,17 @@
+{
+  "name": "ニコ生次枠移動",
+  "version": "0.1",
+  "manifest_version": 2,
+  "description": "自動枠移動だけする",
+  "icons" : {
+    "128": "img/icon.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["http://live.nicovideo.jp/*", "http://com.nicovideo.jp/*", "https://secure.nicovideo.jp/*"],
+      "js": ["lib/jquery.js", "js/content.js"],
+      "css": ["css/css.css"],
+      "run_at": "document_idle"
+    }
+  ]
+}
